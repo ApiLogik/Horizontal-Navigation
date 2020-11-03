@@ -27,17 +27,17 @@ html,body{
 }
 
 h1{
-	font-size: 42px;
+	font-size: 40px;
 	padding: 5px 0;
 }
 
 h2{
-	font-size: 26px;
+	font-size: 24px;
 	padding: 5px 0;
 }
 
 p{
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 1.3em;
 	padding: 5px 0;
 }
@@ -172,7 +172,7 @@ main{
 .texto-loja,
 .texto-local{
 	width: 50%;
-	padding: 50px;
+	padding: 10px 50px;
 	color: rgb(22, 51, 114);
 }
 
@@ -597,8 +597,6 @@ section.local{
 
 	section.galeria .container{padding: 0px 20px;}
 
-	section.galeria .flexbox{overflow: scroll;}
-
 	.galeria-single{
 		width: 33.33%;
 		padding: 10px;
@@ -614,4 +612,31 @@ section.local{
 	.espaco-servicos{height: 25%;}
 
 	.texto-servicos{height: 75%;}
+}
+
+@media (max-height: 500px){
+	html,body{overflow-y: visible;}
+
+	h1{font-size: 26px;}
+	
+	h2{font-size: 18px;}
+	
+	p{font-size: 12px;}
+
+	.texto-sobre{
+		padding: 5px;
+	}
+
+	.galeria-single{
+		width: 25%;
+		padding: 10px;
+	}
+
+	.galeria-single img{width: 80%;}
+	
+	.galeria-single:nth-of-type(9),
+	.galeria-single:nth-of-type(10),
+	.galeria-single:nth-of-type(11),
+	.galeria-single:nth-of-type(12){display: none;}
+	
 }
