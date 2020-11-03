@@ -1,0 +1,617 @@
+/*-------------------GERAL---------------------*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: Verdana, sans-serif;
+	overflow: hidden;
+}
+
+.flexbox{
+	width: 100%;
+	display: inline-flex;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+
+.container{
+	max-width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 2%;
+}
+
+h1{
+	font-size: 42px;
+	padding: 5px 0;
+}
+
+h2{
+	font-size: 26px;
+	padding: 5px 0;
+}
+
+p{
+	font-size: 20px;
+	line-height: 1.3em;
+	padding: 5px 0;
+}
+
+a{text-decoration: none;}
+
+.disable-select{
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+
+/*-------------------HEADER---------------------*/
+header{
+	width: 100%;
+	height: 70px;
+	background: linear-gradient(90deg,  rgb(255, 255, 255)4%, rgb(122, 196, 140)85%, rgb(255, 255, 255)100%);
+	position: fixed;
+	z-index: 99;
+}
+
+.header-logo{
+	width: 25%;
+	height: 70px;
+	display: inline-flex;
+}
+
+.header-logo img{height: 70px;}
+
+.header-logo h1{
+	font-size: 30px;
+	font-weight: lighter;
+	line-height: 66px;
+	color: rgb(22, 51, 114);
+	letter-spacing: 0.1em;
+}
+
+.header-logo h1 span{font-size: 40px;}
+
+.header-menu{
+	width: 75%;
+	height: 70px;
+	text-align: right;
+}
+
+.icons-header{
+	width: 100%;
+	text-align: right;
+}
+
+.icons-header i{
+	font-size: 25px;
+	margin: 5px 17px 10px 0;
+	color: rgb(22, 51, 114);
+	cursor: pointer;
+}
+
+.icons-header .fa-bars{
+	display: none;
+	margin-right: 10px;
+}
+
+.icons-header i.fa-bars{
+	font-size: 28px;
+	color: rgb(22, 51, 114);
+	border: 2px solid rgb(22, 51, 114);
+	border-radius: 10%;
+	padding: 2px 4px;
+}
+
+ul.menu-desktop{
+	display: inline-flex;
+	list-style-type: none;
+}
+
+ul.menu-desktop li{margin: 0 10px;}
+
+ul.menu-desktop li a i,
+ul.menu-mobile li a i{
+	color: rgb(22, 51, 114);
+	padding-right: 5px;
+	visibility: hidden;
+}
+
+ul.menu-desktop li a,
+ul.menu-mobile li a{
+	font-size: 18px;
+	color: rgb(22, 51, 114);
+	padding: 5px;
+}
+
+ul.menu-desktop li a:hover i,
+ul.menu-mobile li a:hover i{visibility: visible;}
+
+ul.menu-mobile{
+	display: none;
+	width: 100%;
+	background: linear-gradient(90deg,  rgb(255, 255, 255)4%, rgb(122, 196, 140)85%, rgb(255, 255, 255)100%);
+	position: absolute;
+	left: 0;
+	top: 70px;
+	z-index: 98;
+	text-align: left;
+	padding: 5px 10px 10px 10px;
+	list-style-type: none;
+	border-bottom: 1px solid  rgb(22, 51, 114);
+}
+
+ul.menu-mobile li{
+	width: 100%;
+	line-height: 35px;
+	border-top: 1px solid rgba(0,0,0,0);
+	border-bottom: 1px solid rgba(0,0,0,0);
+}
+
+ul.menu-mobile li a{font-size: 16px;}
+
+
+/*-------------------SEÇOES E TEXTO---------------------*/
+section{width: 100%;}
+
+main{
+	margin-top: 70px;
+	height: 100%;
+}
+
+.texto-sobre,
+.texto-clinica,
+.texto-servicos,
+.texto-loja,
+.texto-local{
+	width: 50%;
+	padding: 50px;
+	color: rgb(22, 51, 114);
+}
+
+.texto-sobre h1,
+.texto-clinica h1,
+.texto-servicos h1,
+.texto-loja h1,
+.texto-local h1{
+	padding-bottom: 15px;
+	font-weight: lighter;
+	letter-spacing: 0.1em;
+}
+
+
+/*-------------------SOBRE---------------------*/
+section.sobre{
+	background-image: url('../media/bgapres.webp');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.espaco-sobre{width: 50%;}
+
+.texto-sobre h1 span{font-size: 70px;}
+
+.texto-sobre p,
+.texto-clinica p{margin-top: 15px;}
+
+
+/*-------------------CLINICA---------------------*/
+section.clinica{
+	background: linear-gradient(90deg,  rgb(255, 255, 255)4%, rgb(122, 196, 140)85%, rgb(255, 255, 255)100%);
+}
+
+.texto-clinica{width: 50%;}
+
+.texto-clinica ul{
+	margin: 10px;
+	line-height: 1.5em;
+}
+
+.espaco-clinica{
+	width: 50%;
+	padding-top: 70px;
+}
+
+.img-clinica{
+	width: 400px;
+	height: 400px;
+	background-image: url('../media/bgclinica.webp');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+
+/*-------------------SERVICOS---------------------*/
+section.servicos{
+	background-image: url('../media/bgservicos.webp');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-blend-mode: overlay;
+	background-color: rgba(179, 212, 187, 0.9);
+	padding-bottom: 0;
+	padding-right: 0;
+}
+
+section.servicos .container{
+	margin-right: 0;
+	padding-right: 0;
+}
+
+section.servicos .flexbox{height: 100%;}
+
+.espaco-servicos{width: 50%;}
+
+.texto-servicos{
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(90deg, rgb(164, 215, 176)5%, rgb(122, 196, 140)65%, rgb(255, 255, 255)100%);
+}
+
+.texto-servicos ul{
+	margin: 10px;
+	line-height: 1.5em;
+}
+
+
+/*-------------------LOJA---------------------*/
+section.loja{
+	background: linear-gradient(90deg,  rgb(255, 255, 255)4%,  rgb(122, 196, 140)85%, rgb(255, 255, 255)100%);
+}
+
+.texto-loja{width: 50%;}
+
+.texto-loja ul{
+	margin: 10px;
+	line-height: 1.5em;
+}
+
+.texto-loja h2 a{color: inherit;}
+
+.espaco-loja{
+	width: 50%;
+	padding-top: 70px;
+}
+
+.img-loja{
+	width: 400px;
+	height: 400px;
+	background-image: url('../media/bgloja.webp');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+
+
+/*-------------------GALERIA---------------------*/
+section.galeria{
+	background-image: url('../media/bggaleria.webp');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-blend-mode: overlay;
+	background-color: rgba(179, 212, 187, 0.9);
+}
+
+.texto-galeria{
+	width: 100%;
+	text-align: center;
+	padding: 15px;
+	color: rgb(22, 51, 114);
+}
+
+.texto-galeria h1{
+	padding-bottom: 15px;
+	font-weight: lighter;
+	letter-spacing: 0.1em;
+}
+
+.galeria-single{
+	width: 25%;
+	padding: 10px;
+	text-align: center;
+}
+
+.galeria-single img{
+	width: 70%;
+	border: 5px solid rgba(0,0,0,0);
+	border-radius: 10px;
+	transition: 0.7s;
+	cursor: pointer;
+}
+
+.hover-border,
+.galeria-single img:hover{border: 5px solid rgb(22, 51, 114);}
+
+.galeria-zoom{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.9);
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 97;
+}
+
+.galeria-zoom span{
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	right: 10vw;
+	top: 9vh;
+	cursor: pointer;
+	text-align: center;
+}
+
+.galeria-zoom span p{font-size: 12px;}
+
+.img-zoom{
+	width: 100%;
+	margin: 140px auto;
+	text-align: center;
+}
+
+
+/*-------------------LOCAL - ONDE ESTAMOS---------------------*/
+section.local{
+	background: linear-gradient(90deg,  rgb(255, 255, 255)4%,  rgb(122, 196, 140)85%, rgb(255, 255, 255)100%);
+}
+
+.texto-local{
+	width: 50%;
+}
+
+.texto-local i{padding-right: 5px;}
+
+.texto-local a{color: inherit;}
+
+.mapa-local{
+	width: 50%;
+	padding: 50px 30px 50px 30px;
+}
+
+.img-local{
+	width: 400px;
+	height: 400px;
+	background-color: rgb(163, 163, 228);
+	text-align: center;
+	margin: 0 auto;	
+}
+
+.img-local h1{
+	color: rgb(22, 51, 114);
+	line-height: 4em;
+}
+
+
+/*--------------------SLIDER--------------------*/
+
+	/* Full slider container */
+	.box-slides{
+		width: 100%;
+		display: inline-flex;
+		position: relative;
+	}
+
+	
+	/* Individual slides */
+	.slide-single{
+		width: 100%;
+		position: relative;
+		cursor: grab;
+		margin: 0 auto;
+	}
+
+	.slide-single:active{cursor: grabbing;}
+
+
+	/* Navigation bullets */
+	.setas{
+		font-size: 40px;
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		z-index: 96;
+		color: rgb(22, 51, 114);
+		opacity: 0.3;
+		transition: 0.5s;
+	}
+	
+	.setas:hover{
+		opacity: 1;
+		transform: scale(1.2);
+	}
+	
+	#navnext{right: 5px;}
+
+	#navprev{left: 5px;}
+
+/*--------------------FOOTER--------------------*/
+.footer{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding-right: 3px;
+}
+
+.footer p,
+.footer a{
+	font-size: 8px;
+	color: rgba(100,100,100,0.8);
+}
+
+.footer a:hover{text-decoration: underline;}
+
+
+/*-------------------MEDIA QUERIES---------------------*/
+@media (max-width: 1200px){
+	.container{max-width: 900px;}
+
+	ul.menu-desktop li{margin: 0;}
+
+	ul.menu-desktop li a i{padding-right: 5px;}
+
+	ul.menu-desktop li a{font-size: 14px;}
+
+	.sm-icons-header i{
+		font-size: 20px;
+		margin: 5px 8px 17px 0;
+	}
+
+	.texto-sobre{width: 70%}
+
+	p{font-size: 18px;}
+
+	.espaco-sobre{width: 30%}
+
+	.img-clinica,
+	.img-loja,
+	.img-loja{
+		max-width: 300px;
+		max-height: 300px;
+	}
+}
+
+@media (max-width: 840px){
+	h2{font-size: 1.3em;}
+
+	.header-logo{
+		width: 40%;
+		background-size: 100%;
+	}
+
+	.header-menu{
+		display: inline-flex;
+		width: 60%;
+		line-height: 70px;
+	}
+
+	.icons-header i{
+		font-size: 30px;
+		line-height: 60px;
+		margin: 5px;
+	}
+
+	ul.menu-desktop{display: none;}
+
+	#iconMobMenu{display: inline;}
+
+	section.sobre{
+		background-position: right -180px top;
+		background-blend-mode: overlay;
+		background-color: rgba(255,255,255,0.7);
+	}
+
+	.img-clinica,
+	.img-loja,
+	.img-local{
+		width: 200px;
+		height: 200px;
+	}
+	
+	.galeria-single{
+		width: 25%;
+		padding: 10px;
+	}
+}
+
+@media (max-width: 600px){
+	h1{font-size: 34px;}
+	
+	h2{font-size: 22px;}
+	
+	p{font-size: 14px;}
+
+	.header-logo h1{display: none;}
+
+	.texto-sobre{
+		width: 100%;
+		padding: 20px 30px 20px 30px;
+	}
+
+	.texto-sobre h1 span{font-size: 62px;}
+
+	.espaco-sobre{display: none;}
+
+	section.clinica .flexbox,
+	section.loja .flexbox{flex-wrap: wrap-reverse;}
+	
+	.texto-clinica,
+	.texto-loja,
+	.texto-local{
+		width: 100%;
+		padding: 10px 25px;
+	}
+	
+	.espaco-clinica,
+	.espaco-loja,
+	.mapa-local{
+		width: 100%;
+		padding-top: 10px;
+	}
+	
+	.img-clinica,
+	.img-loja{
+		width: 120px;
+		height: 120px;
+	}
+
+	section.servicos{
+		background-size: 100vw;
+		background-position: top 70px left 0;
+	}
+
+	section.servicos .container{padding: 0;}
+
+	.espaco-servicos{
+		width: 100%;
+		height: 30%;
+	}
+
+	.texto-servicos{
+		width: 100%;
+		height: 70%;
+		padding: 10px 10px 0 30px;
+	}
+	
+	.texto-galeria{padding-bottom: 10px;}
+
+	section.galeria .container{padding: 0px 20px;}
+
+	section.galeria .flexbox{overflow: scroll;}
+
+	.galeria-single{
+		width: 33.33%;
+		padding: 10px;
+	}
+
+	.galeria-single img{width: 100%;}
+
+	.img-zoom img{width: 80%;}
+	
+}
+
+@media (max-width: 340px){
+	.espaco-servicos{height: 25%;}
+
+	.texto-servicos{height: 75%;}
+}
