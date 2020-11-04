@@ -615,7 +615,10 @@ section.local{
 }
 
 @media (max-height: 500px){
-	html,body{overflow-y: visible;}
+	html,body{
+		overflow-y: visible;
+		height: auto;
+	}
 
 	h1{font-size: 26px;}
 	
@@ -638,5 +641,12 @@ section.local{
 	.galeria-single:nth-of-type(10),
 	.galeria-single:nth-of-type(11),
 	.galeria-single:nth-of-type(12){display: none;}
+
+	.img-zoom img{width: 50%;}
+
+	.footer{
+		bottom: -140px;
+	}
 	
+	.galeria-zoom{height: auto;}
 }
