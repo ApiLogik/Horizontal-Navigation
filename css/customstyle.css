@@ -650,3 +650,9 @@ section.local{
 	
 	.galeria-zoom{height: auto;}
 }
+
+@media (max-height: 320px){
+	.footer{
+		bottom: -200px;
+	}
+}
